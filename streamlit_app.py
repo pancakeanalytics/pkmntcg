@@ -48,16 +48,18 @@ def create_csv(results):
 # --- App Config ---
 st.set_page_config(page_title="Pokémon TCG Monte Carlo Simulator", layout="wide")
 
-# --- Tampa Comic Con Logo & Intro ---
+# --- Header Image (from your website) ---
+header_image_url = "https://pancakebreakfaststats.com/wp-content/uploads/2025/07/Sales-Simulation.png"
 st.markdown(
-    """
+    f"""
     <div style='text-align:center;'>
-        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Tampa_Bay_Comic_Convention_logo.png/800px-Tampa_Bay_Comic_Convention_logo.png' width='300'>
+        <img src='{header_image_url}' width='600'>
     </div>
     """,
     unsafe_allow_html=True
 )
 
+# --- Intro Text ---
 st.markdown(
     """
     ### Welcome Pokémon Collectors!
@@ -224,5 +226,13 @@ if st.button("Run Simulation"):
 else:
     st.info("Adjust your inputs in the sidebar and click **Run Simulation** to see results.")
 
-# --- Footer Icon ---
-st.markdown(f"<div style='text-align:center;'><img src='https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG' width='60'></div>", unsafe_allow_html=True)
+# --- Footer Image (from your website) ---
+footer_image_url = "https://pancakebreakfaststats.com/wp-content/uploads/2025/07/Sales-Simulation.png"
+st.markdown(
+    f"""
+    <div style='text-align:center; margin-top:20px;'>
+        <img src='{footer_image_url}' width='300'>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
